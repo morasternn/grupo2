@@ -1,4 +1,5 @@
 let data = require("../db/index")
+let usuario = data.usuario
 
 let productController={
     producto: function (req, res) {

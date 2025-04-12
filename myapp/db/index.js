@@ -13,7 +13,7 @@ let lista = {
         {
         imagen:"/images/products/1.jpg",
         nombre: "Silla Premier",
-        descripción: "Silla con estructura de madera multilaminada, asiento y respaldo acolchonados en ecocuero, y patas de madera, ofreciendo confort y durabilidad. Ideal para espacios modernos y elegantes.",
+        descripcion: "Silla con estructura de madera multilaminada, asiento y respaldo acolchonados en ecocuero, y patas de madera, ofreciendo confort y durabilidad. Ideal para espacios modernos y elegantes.",
         comentarios:[
             {
                 usuario: "user1",
@@ -25,7 +25,7 @@ let lista = {
     {
         imagen:"/images/products/2.jpg",
         nombre: "Silla Circular",
-        descripción: "El Sillón Premier Circular ofrece generosas dimensiones y un asiento acogedor,ligeramente curvado para garantizar un soporte óptimo.El elegante asiento es acolchado y está compuesto por eco cuero.",
+        descripcion: "El Sillón Premier Circular ofrece generosas dimensiones y un asiento acogedor,ligeramente curvado para garantizar un soporte óptimo.El elegante asiento es acolchado y está compuesto por eco cuero.",
         comentarios:[
             {
                 usuario: "user2",
@@ -38,7 +38,7 @@ let lista = {
     {
         imagen:"/images/products/3.jpg",
         nombre: "Silla Ruby",
-        descripción: "Una cómoda silla de mesa con respaldo blando .también puede utilizarse como silla de oficina.",
+        descripcion: "Una cómoda silla de mesa con respaldo blando .también puede utilizarse como silla de oficina.",
         comentarios:[
             {
                 usuario: "user3",
@@ -50,7 +50,7 @@ let lista = {
     {
         imagen:"/images/products/4.jpg",
         nombre: "Silla danna",
-        descripción: "La suave curvatura de la madera,el asiento acolchado y el respaldo garantizan una comodidad total.",
+        descripcion: "La suave curvatura de la madera,el asiento acolchado y el respaldo garantizan una comodidad total.",
         comentarios:[
             {
                 usuario: "user4",
@@ -62,7 +62,7 @@ let lista = {
     {
         imagen:"/images/products/5.jpg",
         nombre: "Silla Madison",
-        descripción: "Línea sobria y contemporánea.El sillón de mesa Madison es moderno con un toque de espíritu vintage.",
+        descripcion: "Línea sobria y contemporánea.El sillón de mesa Madison es moderno con un toque de espíritu vintage.",
         comentarios:[
             {
                 usuario: "user5",
@@ -75,7 +75,7 @@ let lista = {
     {
         imagen:"/images/products/6.jpg",
         nombre: "Silla Emma",
-        descripción: "Combiná la elegancia y calidez de la madera con un tapizado en tela.Su diseño ergonómico se adapta perfectamente al contorno del cuerpo,proporcionando una exelente postura para largas jornadas.",
+        descripcion: "Combiná la elegancia y calidez de la madera con un tapizado en tela.Su diseño ergonómico se adapta perfectamente al contorno del cuerpo,proporcionando una exelente postura para largas jornadas.",
         comentarios:[
             {
                 usuario: "user6",
@@ -88,7 +88,7 @@ let lista = {
     {
         imagen:"/images/products/7.jpg",
         nombre: "Silla Miller",
-        descripción: "Su estructura de madera proporciona un toque elegante y duradero. Ideal para oficinas modernas que buscan entre estilo y funcionalidad.",
+        descripcion: "Su estructura de madera proporciona un toque elegante y duradero. Ideal para oficinas modernas que buscan entre estilo y funcionalidad.",
         comentarios:[
             {
                 usuario: "user7",
@@ -100,7 +100,7 @@ let lista = {
     {
         imagen:"/images/products/8.jpg",
         nombre: "Silla Gerencial",
-        descripción: "La silla es regulable en altura,su asiento es giratorio y el respaldo cuenta con un mecanismo de balanceo ofreciendo una libertad de movimientos.",
+        descripcion: "La silla es regulable en altura,su asiento es giratorio y el respaldo cuenta con un mecanismo de balanceo ofreciendo una libertad de movimientos.",
         comentarios:[
             {
                 usuario: "user8",
@@ -113,7 +113,7 @@ let lista = {
     {
         imagen:"/images/products/9.jpg",
         nombre: "Silla Ergonomico",
-        descripción: "Equipado con sistema Relax y basculante, regulación a gas y base metálica estrella de 5 ruedas. Resistencia hasta 120 kg.",
+        descripcion: "Equipado con sistema Relax y basculante, regulación a gas y base metálica estrella de 5 ruedas. Resistencia hasta 120 kg.",
         comentarios:[
             {
                 usuario: "user9",
