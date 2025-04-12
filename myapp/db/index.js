@@ -11,70 +11,132 @@ let lista = {
     productos:
     [
         {
-        imagen:"foto1.png",
-        nombre: "producto",
-        descripción: "descripcion-producto-1",
+        imagen:"/images/products/1.jpg",
+        nombre: "Silla Premier",
+        descripción: "Silla con estructura de madera multilaminada, asiento y respaldo acolchonados en ecocuero, y patas de madera, ofreciendo confort y durabilidad. Ideal para espacios modernos y elegantes.",
+        comentarios:[
+            {
+                usuario: "user1",
+                comentario:"Muy buena calidad",
+                imagen:"/images/users/user1.png",
+            }
+        ]
+    },
+    {
+        imagen:"/images/products/2.jpg",
+        nombre: "Silla Circular",
+        descripción: "El Sillón Premier Circular ofrece generosas dimensiones y un asiento acogedor,ligeramente curvado para garantizar un soporte óptimo.El elegante asiento es acolchado y está compuesto por eco cuero.",
+        comentarios:[
+            {
+                usuario: "user2",
+                comentario:"Se me rompio al dia siguiente",
+                imagen:"/images/users/user2.png",
+            }
+        ]
 
     },
     {
-        imagen:"foto1.png",
-        nombre: "producto2",
-        descripción: "descripcion-producto-1",
-
+        imagen:"/images/products/3.jpg",
+        nombre: "Silla Ruby",
+        descripción: "Una cómoda silla de mesa con respaldo blando .también puede utilizarse como silla de oficina.",
+        comentarios:[
+            {
+                usuario: "user3",
+                comentario:"No es igual a las fotos",
+                imagen:"/images/users/user3.png",
+            }
+        ]
     },
     {
-        imagen:"foto1.png",
-        nombre: "producto3",
-        descripción: "descripcion-producto-1",
-
-    },
-    {
-        imagen:"foto1.png",
-        nombre: "producto1",
-        descripción: "descripcion-producto-1",
+        imagen:"/images/products/4.jpg",
+        nombre: "Silla danna",
+        descripción: "La suave curvatura de la madera,el asiento acolchado y el respaldo garantizan una comodidad total.",
+        comentarios:[
+            {
+                usuario: "user4",
+                comentario:"No me gusto",
+                imagen:"/images/users/user4.png",
+            }
+        ]
     },    
     {
-        imagen:"foto1.png",
-        nombre: "producto1",
-        descripción: "descripcion-producto-1",
+        imagen:"/images/products/5.jpg",
+        nombre: "Silla Madison",
+        descripción: "Línea sobria y contemporánea.El sillón de mesa Madison es moderno con un toque de espíritu vintage.",
+        comentarios:[
+            {
+                usuario: "user5",
+                comentario:"Muy buen diseño",
+                imagen:"/images/users/user5.png",
+            }
+        ]
 
     }, 
     {
-        imagen:"foto1.png",
-        nombre: "producto1",
-        descripción: "descripcion-producto-1",
+        imagen:"/images/products/6.jpg",
+        nombre: "Silla Emma",
+        descripción: "Combiná la elegancia y calidez de la madera con un tapizado en tela.Su diseño ergonómico se adapta perfectamente al contorno del cuerpo,proporcionando una exelente postura para largas jornadas.",
+        comentarios:[
+            {
+                usuario: "user6",
+                comentario:"Estetica pero no practica",
+                imagen:"/images/users/user6.png",
+            }
+        ]
 
     }, 
     {
-        imagen:"foto1.png",
-        nombre: "producto1",
-        descripción: "descripcion-producto-1",
+        imagen:"/images/products/7.jpg",
+        nombre: "Silla Miller",
+        descripción: "Su estructura de madera proporciona un toque elegante y duradero. Ideal para oficinas modernas que buscan entre estilo y funcionalidad.",
+        comentarios:[
+            {
+                usuario: "user7",
+                comentario:"No es tan alta",
+                imagen:"/images/users/user7.png",
+            }
+        ]
+    }, 
+    {
+        imagen:"/images/products/8.jpg",
+        nombre: "Silla Gerencial",
+        descripción: "La silla es regulable en altura,su asiento es giratorio y el respaldo cuenta con un mecanismo de balanceo ofreciendo una libertad de movimientos.",
+        comentarios:[
+            {
+                usuario: "user8",
+                comentario:"Cumplio mis expectativas",
+                imagen:"/images/users/user8.png",
+            }
+        ]
 
     }, 
     {
-        imagen:"foto1.png",
-        nombre: "producto1",
-        descripción: "descripcion-producto-1",
+        imagen:"/images/products/9.jpg",
+        nombre: "Silla Ergonomico",
+        descripción: "Equipado con sistema Relax y basculante, regulación a gas y base metálica estrella de 5 ruedas. Resistencia hasta 120 kg.",
+        comentarios:[
+            {
+                usuario: "user9",
+                comentario:"Muy comoda",
+                imagen:"/images/users/user9.png",
+            }
+        ]
 
     }, 
     {
-        imagen:"foto1.png",
-        nombre: "producto1",
-        descripción: "descripcion-producto-1",
-
-    }, 
-    {
-        imagen:"foto1.png",
-        nombre: "producto1",
-        descripcion: "descripcion-producto-1",
+        imagen:"/images/products/10.jpg",
+        nombre: "Silla Eames",
+        descripcion: "Silla con asiento de polipropileno de 5-6 mm de espesor, base de madera y soportes de hierro. Resistencia hasta 130 kg, ofreciendo robustez y durabilidad.",
+        comentarios:[
+            {
+                usuario: "user10",
+                comentario:"Basica pero sirve",
+                imagen:"/images/users/user10.png",
+            }
+        ]
 
     },         
 
-    ],
-    comentarios:[
-
-    ]
-
-}
+]}
 
 module.exports = lista;
