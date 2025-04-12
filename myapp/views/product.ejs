@@ -1,73 +1,41 @@
-
-
 <!DOCTYPE html>
 <html lang="es">
-<!-- Include Head -->
-<%- include("./partials/head") %>
+
+<%- include('./partials/head') %>
+
 <body>
 	<!-- Header -->
-	<%- include("./partials/header") %>	
+	<%- include('./partials/header') %>
 	<!-- /Header -->
-
-	<!-- product detail -->
 	
+	<!-- product detail -->
 	<div class="container products-wrapper">
 		<div class="d-flex align-items-center">
 			<h2 class="products-title"><%= producto.nombre %></h2> 
 			<p class="product-detail-description">
-				<a href="product-add.html">Editar</a>
+				<a href="/producto/agregarproducto">Editar</a>
 			</p>
 		</div>
 		<div class="product-detail">
 			<div class="row">
 				<article class="col-12 col-lg-8 product-detail-info">
-					<img src="<%= producto.imagen %>" alt="<%= producto.nombre %>" class="product-detail-img">
-					<p class="product-detail-description"><%= producto.descripcion %></p>
+					<img src="/images/products/<%= producto.imagen %>" alt=" <%= producto.nombre %>" class="product-detail-img">
+					<p class="product-detail-description">
+						<%= producto.descripcion %> </p>
 				</article>
 				<div class="col-12 col-lg-4">
 					<section class="comments">
-						<article>
-							<img src="https://via.placeholder.com/35" alt="">
+
+						<%for (let i = 0; i < producto.comentarios.length; i++) { %>
+							<article>
+							<img src="/images/users/<%= producto.comentarios[i].imagen %>" alt="">
 							<div class="data">
 								<p class="user">
-								<strong> <a href="profile.html">Nombre usuario: </a> </strong>
-								 Texto del comentario que escribió el usuario Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora doloribus enim aspernatur fugit corrupti suscipit sit dolore magnam, praesentium explicabo inventore molestias facilis labore. Fugit ipsa mollitia odit inventore consequuntur.</p>
+								<strong> <a href="profile.html"><%= producto.comentarios[i].nombre %> </a> </strong>
+								<%= producto.comentarios[i].comentario %></p>
 							</div>
-						</article>
-						<article>
-							<img src="https://via.placeholder.com/35" alt="">
-							<div class="data">
-								<p class="user">
-									<strong> <a href="profile.html">Nombre usuario: </a> </strong>
-									Texto del comentario que escribió el usuario Lorem ipsum dolor sit amet consectetur.</p>
-							</div>
-						</article>
-						<article>
-							<img src="https://via.placeholder.com/35" alt="">
-							<div class="data">
-								<p class="user">
-									<strong> <a href="profile.html">Nombre usuario: </a> </strong>
-									Texto del comentario que escribió el usuario Lorem ipsum dolor sit amet consectetur adipisicing elit.
-									</p>
-							</div>
-						</article>
-						<article>
-							<img src="https://via.placeholder.com/35" alt="">
-							<div class="data">
-								<p class="user">
-									<strong> <a href="profile.html">Nombre usuario: </a> </strong>
-									Texto del comentario que escribió el usuario Lorem ipsum dolor sit amet.</p>
-							</div>
-						</article>
-						<article>
-							<img src="https://via.placeholder.com/35" alt="">
-							<div class="data">
-								<p class="user">
-									<strong> <a href="profile.html">Nombre usuario: </a> </strong>
-									Texto del comentario que escribió el usuario Lorem ipsum dolor sit amet consectetur adipisicing elit.
-									Tempora doloribus enim aspernatur fugit corrupti suscipit sit dolore</p>
-							</div>
-						</article>
+							</article>
+						<% } %>
 
 					</section>
 					<form class="form" action="" method="POST">
@@ -82,7 +50,7 @@
 	<!-- /product detail -->
 
 	<!-- footer -->
-	<%- include("./partials/footer") %>
+	<%- include('./partials/footer') %>
 	<!-- /footer -->
 
 </body>	
