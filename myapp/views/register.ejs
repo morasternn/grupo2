@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="es">
 <!-- Include Head -->
@@ -18,17 +16,41 @@
 				<h2 class="products-title">Registrate</h2>
 			</div>
 			<!-- Show the "ultimos" products -->
-			<h2 class="col-12"> <i>///////////////////////////////////////// <br> Acá va el formulario de registro. <br>
-			Debe cumplir con los puntos de la consigna y ser coherente con la tabla de la base de datos <br>
-			Eliminen estás líneas y coloquen el formulario. <br>
-			Recuerden todo lo que necesita tanto la etiqueta form como los campos input para operar correctamtente</i> <br>
-			////////////////
-			</h2>
-
-
-	<!-- footer -->
+        <div class="col-12">
+          <form action="/" method="GET">
+            <div>
+              <label for="email">Email:</label>
+              <input type="email" name="email" id="email" required>
+            </div>
+            <div>
+              <label for="usuario">Usuario:</label>
+              <input type="text" name="usuario" id="usuario" required>
+            </div>
+            <div>
+              <label for="contrasena">Contraseña:</label>
+              <input type="password" name="contrasena" id="contrasena" required>
+            </div>
+            <div>
+              <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+              <input type="date" name="fechaNacimiento" id="fechaNacimiento" required>
+            </div>
+            <div>
+              <label for="dni">Número de Documento:</label>
+              <input type="number" name="dni" id="dni" required>
+            </div>
+            <div>
+              <label for="foto">Foto de Perfil (URL):</label>
+              <input type="text" name="foto" id="foto" required>
+            </div>
+            <div>
+              <button type="submit">Registrarse</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
 	<%- include("./partials/footer") %>
 	<!-- /footer -->
-</body>
-
+  </body>
 </html>
