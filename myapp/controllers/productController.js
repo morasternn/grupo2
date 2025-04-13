@@ -8,7 +8,7 @@ let productController={
         
     },
     agregarProducto: function (req, res) {
-        res.render("product-add")        
+        res.render("product-add",{usuario:usuario})       
     }
 }
 
