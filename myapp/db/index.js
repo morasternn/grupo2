@@ -5,7 +5,7 @@ let lista = {
         contraseña: 'holaa1316',
         fechaNacimiento:"2005-06-06",
         dni: 46755985,
-        foto:'/images/users/default-image.png'
+        foto:'/images/users/user.png'
     },
 
     productos:
