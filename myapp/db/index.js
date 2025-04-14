@@ -113,7 +113,7 @@ let lista = {
     {
         imagen:"/images/products/9.png",
         nombre: "Silla Chiara",
-        descripcion: "Su asiento en forma de cubo y tapizado en tela,aporta un toque acogedor a tu espacio.",
+        descripcion: "Su asiento en forma de cubo y tapizado en tela,aporta un toque acogedor a tu espacio.Las patas dan un aire ligero y moderno.",
         comentarios:[
             {
                 usuario: "user9",
