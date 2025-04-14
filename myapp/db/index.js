@@ -1,10 +1,10 @@
 let lista = {
     usuario: {
-        email:'juliszelubski@gmail.com',
-        usuario:'juliszelu',
+        email:'manuweinstein@gmail.com',
+        usuario:'manuweinstein',
         contraseña: 'holaa1316',
         fechaNacimiento:"2005-06-06",
-        dni: 46755985,
+        dni: 67066797,
         foto:'/images/users/user.png'
     },
 
