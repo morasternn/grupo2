@@ -357,12 +357,6 @@ header {
   color: #4a403a;
 }
 
-.form-agregar input:focus {
-  outline: none;
-  border-color: #c1a68c;
-  box-shadow: 0 0 8px rgba(193, 166, 140, 0.2);
-}
-
 .btn {
   background-color: #d2b48c;
   color: #fff;
@@ -373,8 +367,6 @@ header {
   font-weight: 600;
   font-size: 18px;
   width: 100%;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
 }
 
 .btn:hover {
