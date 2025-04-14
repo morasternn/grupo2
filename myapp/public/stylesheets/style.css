@@ -55,6 +55,28 @@ header {
   margin: 0;
 }
 
+/* Header Logueado*/
+.logout {
+  background-color: #c7af9a;
+  color: #fffdf5;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 14px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.logout i {
+  color: #fffdf5;
+}
+
+.logout:hover {
+  background-color: #b99d83;
+  color: #ffffff;
+}
 
 
 
