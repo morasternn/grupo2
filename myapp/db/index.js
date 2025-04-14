@@ -11,7 +11,7 @@ let lista = {
     productos:
     [
         {
-        imagen:"/images/products/1.jpg",
+        imagen:"/images/products/1.png",
         nombre: "Silla Premier",
         descripcion: "Silla con estructura de madera multilaminada, asiento y respaldo acolchonados en ecocuero, y patas de madera, ofreciendo confort y durabilidad. Ideal para espacios modernos y elegantes.",
         comentarios:[
@@ -23,7 +23,7 @@ let lista = {
         ]
     },
     {
-        imagen:"/images/products/2.jpg",
+        imagen:"/images/products/2.png",
         nombre: "Silla Circular",
         descripcion: "El Sillón Premier Circular ofrece generosas dimensiones y un asiento acogedor,ligeramente curvado para garantizar un soporte óptimo.El elegante asiento es acolchado y está compuesto por eco cuero.",
         comentarios:[
@@ -36,7 +36,7 @@ let lista = {
 
     },
     {
-        imagen:"/images/products/3.jpg",
+        imagen:"/images/products/3.png",
         nombre: "Silla Ruby",
         descripcion: "Una cómoda silla de mesa con respaldo blando .también puede utilizarse como silla de oficina.",
         comentarios:[
@@ -48,7 +48,7 @@ let lista = {
         ]
     },
     {
-        imagen:"/images/products/4.jpg",
+        imagen:"/images/products/4.png",
         nombre: "Silla danna",
         descripcion: "La suave curvatura de la madera,el asiento acolchado y el respaldo garantizan una comodidad total.",
         comentarios:[
@@ -60,7 +60,7 @@ let lista = {
         ]
     },    
     {
-        imagen:"/images/products/5.jpg",
+        imagen:"/images/products/5.png",
         nombre: "Silla Madison",
         descripcion: "Línea sobria y contemporánea.El sillón de mesa Madison es moderno con un toque de espíritu vintage.",
         comentarios:[
@@ -73,7 +73,7 @@ let lista = {
 
     }, 
     {
-        imagen:"/images/products/6.jpg",
+        imagen:"/images/products/6.png",
         nombre: "Silla Emma",
         descripcion: "Combiná la elegancia y calidez de la madera con un tapizado en tela.Su diseño ergonómico se adapta perfectamente al contorno del cuerpo,proporcionando una exelente postura para largas jornadas.",
         comentarios:[
@@ -86,7 +86,7 @@ let lista = {
 
     }, 
     {
-        imagen:"/images/products/7.jpg",
+        imagen:"/images/products/7.png",
         nombre: "Silla Miller",
         descripcion: "Su estructura de madera proporciona un toque elegante y duradero. Ideal para oficinas modernas que buscan entre estilo y funcionalidad.",
         comentarios:[
@@ -98,9 +98,9 @@ let lista = {
         ]
     }, 
     {
-        imagen:"/images/products/8.jpg",
-        nombre: "Silla Gerencial",
-        descripcion: "La silla es regulable en altura,su asiento es giratorio y el respaldo cuenta con un mecanismo de balanceo ofreciendo una libertad de movimientos.",
+        imagen:"/images/products/8.png",
+        nombre: "Silla Maite",
+        descripcion: "Su diseño se adapta a todos los ambientes,combiando la calidez de la madera y el confort del tapizado con un estilo clásico y sofisticado.",
         comentarios:[
             {
                 usuario: "user8",
@@ -111,9 +111,9 @@ let lista = {
 
     }, 
     {
-        imagen:"/images/products/9.jpg",
-        nombre: "Silla Ergonomico",
-        descripcion: "Equipado con sistema Relax y basculante, regulación a gas y base metálica estrella de 5 ruedas. Resistencia hasta 120 kg.",
+        imagen:"/images/products/9.png",
+        nombre: "Silla Chiara",
+        descripcion: "Su asiento en forma de cubo y tapizado en tela,aporta un toque acogedor a tu espacio.",
         comentarios:[
             {
                 usuario: "user9",
@@ -124,7 +124,7 @@ let lista = {
 
     }, 
     {
-        imagen:"/images/products/10.jpg",
+        imagen:"/images/products/10.png",
         nombre: "Silla Eames",
         descripcion: "Silla con asiento de polipropileno de 5-6 mm de espesor, base de madera y soportes de hierro. Resistencia hasta 130 kg, ofreciendo robustez y durabilidad.",
         comentarios:[

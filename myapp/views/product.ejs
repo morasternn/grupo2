@@ -10,12 +10,11 @@
 	
 	<!-- product detail -->
 	<div class="container products-wrapper">
-		<div class="d-flex align-items-center">
-			<h2 class="products-title"><%= producto.nombre %></h2> 
-			<p class="product-detail-description">
-				<a href="/producto/agregarproducto">Editar</a>
-			</p>
-		</div>
+		<div class="product-header-inline">
+			<h2 class="products-title-inline"><%= producto.nombre %></h2>
+			<a href="/producto/agregarproducto" class="editar-link">Editar</a>
+		  </div>
+		  
 		<div class="product-detail">
 			<div class="row">
 				<article class="col-12 col-lg-8 product-detail-info">
@@ -31,7 +30,7 @@
 							<img src="<%= producto.comentarios[i].imagen %>" alt="">
 							<div class="data">
 								<p class="user">
-								<strong> <a href="profile.html"><%= producto.comentarios[i].usuario %> </a> </strong>
+								<strong> <a href="/users/profile"><%= producto.comentarios[i].usuario %> </a> </strong>
 								<%= producto.comentarios[i].comentario %></p>
 							</div>
 							</article>

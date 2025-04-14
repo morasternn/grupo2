@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="es">
 <!-- Include Head -->
@@ -18,12 +16,23 @@
 				<h2 class="products-title">Agregar productos</h2>
 			</div>
 			<!-- Show the "ultimos" products -->
-			<h2 class="col-12"> Agregar producto </h2>
-			<form method="get" action="/users/profile" > 
-				<input type="file" name="imagen" id="imagen">
-				<input type="text" name="nombre" id="nombre">
-				<input type="text" name="descripcion" id="descripcion">
-				<button type="submit">enviar</button>
+			<form method="get" action="/users/profile" class="form-agregar"> 
+				<div>
+					<label for="imagen">Imagen:</label>
+					<input type="file" name="imagen" id="imagen">
+				  </div>
+				  <div>
+					<label for="nombre">Nombre:</label>
+					<input type="text" name="nombre" id="nombre">
+				  </div>
+				  <div>
+					<label for="descripcion">Descripción:</label>
+					<input type="text" name="descripcion" id="descripcion">
+				  </div>
+				  <div>
+					<button type="submit" class="btn">Enviar</button>
+				  </div>
+				  
 			</form>
 
 

@@ -17,7 +17,7 @@
 			</div>
 			<!-- Show the "ultimos" products -->
         <div class="col-12">
-          <form action="/" method="GET">
+          <form action="/" method="GET" class="form-login">
             <div>
               <label for="usuario">Usuario (Email):</label>
               <input type="email" name="usuario" id="usuario" required>
@@ -26,9 +26,10 @@
               <label for="contrasena">Contraseña:</label>
               <input type="password" name="contrasena" id="contrasena" required>
             </div>
-            <div>
-              <input type="checkbox" name="recordarme" id="recordarme">
-              <label for="recordarme">Recordarme</label>
+            <div class="checkbox-group">
+              <label>
+                <input type="checkbox" name="recordarme" id="recordarme">
+                Recordarme
             </div>
             <div>
               <button type="submit">Ingresar</button>

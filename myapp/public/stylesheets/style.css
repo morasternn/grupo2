@@ -1,8 +1,487 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+body {
+  background-color: #fffdf5;
+  color: #4a403a;
+  font-family: "Lora", serif;
+}
+
+
 a {
-  color: #00B7FF;
+  text-decoration: none;
+  color: #a88c6e;
+}
+
+header a:hover {
+  color: #7d6954;
+  text-decoration: underline;
+}
+
+/* Header */
+header {
+  background-color:#fffdf5;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #c7af9a;
+}
+
+.logo img {
+  height: 60px;
+}
+
+.nombre-sitio-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.nombre-sitio {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 34px;
+  color: #a88c63;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+  margin: 0;
+}
+
+
+
+
+/* Navbar */
+.navbar {
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+
+
+/* Título de productos */
+.products-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #8a6f56;
+}
+
+/* Productos */
+.product-box {
+  background-color: #fdfaf6;
+  padding: 15px;
+  border-radius: 16px;
+  margin: 15px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+}
+
+
+.product-box_image img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.product-box_data h2 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #6b5848;
+  font-weight: bold;
+}
+
+.product-box_data p {
+  font-size: 0.95rem;
+  color: #6b5848;
+}
+
+/* Detalle del producto */
+.product-detail {
+  background-color: #fdfaf6;
+  border: 1px solid #e6d5c3;
+  border-radius: 20px;
+  padding: 30px;
+  margin: 40px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  font-family: 'Lora', serif;
+}
+
+.product-detail-img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+
+.product-detail-description {
+  font-size: 1rem;
+  color: #5a4b3c;
+  margin: 10px 0 20px;
+}
+.product-header-inline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.products-title-inline {
+  font-size: 2rem;
+  font-family: 'Lora', serif;
+  color: #6b5848;
+  margin: 0;
+}
+
+.editar-link {
+  font-size: 14px;
+  color: #a88c6e;
+  text-decoration: none;
+}
+
+.editar-link:hover {
+  color: #7d6954;
+  text-decoration: underline;
+}
+
+/* Comentarios */
+.comments {
+  background-color: #fffdf5;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid #e0d4c0;
+  margin-bottom: 20px;
+}
+
+.comments article {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.comments article img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.comments .user {
+  font-size: 14px;
+  color: #6b5848;
+}
+
+/* Formulario de comentario */
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #d6cfc2;
+  background-color: #fffdf5;
+  font-size: 15px;
+  color: #4a403a;
+}
+
+.buy-now-button {
+  background-color: #d2b48c;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 12px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.buy-now-button:hover {
+  background-color: #bfa178;
+}
+
+/* Profile */
+.info-usuario {
+  padding: 40px 0;
+  background-color: #fdfaf6;
+  border: 1px solid #e6d5c3;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  margin-bottom: 40px;
+}
+
+.foto-perfil {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #d2b48c;
+  margin-bottom: 20px;
+}
+
+.main-title {
+  font-family: 'Lora', serif;
+  font-size: 28px;
+  color: #6b5848;
+  display: flex;
+  align-items: center;
+}
+
+.editar-icono i {
+  font-size: 18px;
+  color: #a88c6e;
+}
+
+.editar-icono i:hover {
+  color: #7d6954;
+}
+
+.btn.mt-3.ml-4 {
+  margin-left: 20px;
+  background-color: #d2b48c;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 12px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+.data-container p {
+  margin-top: 10px;
+  color: #5a4b3c;
+}
+
+.data-container ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  color: #6b5848;
+  font-size: 14px;
+}
+
+
+/* Resultados busqueda*/
+.resultado-box {
+  background-color: #fdfaf6;
+  border: 1px solid #e0d4c0;
+  border-radius: 16px;
+  padding: 20px;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  font-family: 'Lora', serif;
+}
+
+.resultado-box img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.resultado-box h2 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #6b5848;
+  font-weight: bold;
+}
+
+.resultado-box p {
+  font-size: 0.95rem;
+  color: #6b5848;
+}
+
+/* Agregar producto */
+.form-agregar {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 30px;
+  background-color: #fdfaf6;
+  border: 1px solid #e6d5c3;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  font-family: 'Lora', serif;
+}
+
+.form-agregar div {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-agregar label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #6b5848;
+}
+
+.form-agregar input {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #d6cfc2;
+  background-color: #fffdf5;
+  font-size: 15px;
+  color: #4a403a;
+}
+.btn {
+  background-color: #d2b48c;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  width: 100%;
+
+}
+
+.btn:hover {
+  background-color: #bfa178;
+}
+
+
+/* Register */
+.form-registro {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 30px;
+  background-color: #fdfaf6;
+  border: 1px solid #e6d5c3;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  font-family: 'Lora', serif;
+}
+
+.form-registro div {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-registro label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #6b5848;
+}
+
+.form-registro input {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #d6cfc2;
+  background-color: #fffdf5;
+  font-size: 15px;
+  color: #4a403a;
+}
+
+/* Login */
+.form-login {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 30px;
+  background-color: #fdfaf6;
+  border: 1px solid #e6d5c3;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  font-family: 'Lora', serif;
+}
+
+.form-login div {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-login label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #6b5848;
+}
+
+.form-login input{
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #d6cfc2;
+  background-color: #fffdf5;
+  font-size: 15px;
+  color: #4a403a;
+}
+.checkbox-group {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #6b5848;
+  font-weight: bold;
+}
+
+
+
+/* Footer */
+footer {
+  background-color: #fffdf5;
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #6b5848;
+  border-top: 2px solid #e6d5c3;
+}
+.footer-nombres {
+  font-family: 'Lora', serif;
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px 0;
+  border-top: 2px solid #e0d4c0;
+  background-color: #fffdf5;
+}
+
+.footer-nombres .footer-label {
+  font-size: 14px;
+  color: #a88c63;
+  margin-bottom: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.footer-nombres ul {
+  list-style: none;
+}
+
+.footer-nombres ul li {
+  font-size: 13px;
+  color: #5a4b3c;
+  margin-bottom: 5px;
+}
+
+/* Botones */
+button,
+.btn {
+  background-color: #d2b48c;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+button:hover,
+.btn:hover {
+  background-color: #bfa178;
+}
+
+.logo-nombre-sitio {
+  font-family: 'Lora', serif;
+  font-size: 28px;
+  color: #a88c63;
+  margin-left: 20px;
 }
