@@ -38,7 +38,7 @@ let lista = {
     {
         imagen:"/images/products/3.png",
         nombre: "Silla Ruby",
-        descripcion: "Una cómoda silla de mesa con respaldo blando .también puede utilizarse como silla de oficina.",
+        descripcion: "Una cómoda silla de mesa con respaldo blando.también puede utilizarse como silla de oficina.",
         comentarios:[
             {
                 usuario: "user3",

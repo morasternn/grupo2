@@ -125,6 +125,21 @@ header {
   font-size: 0.95rem;
   color: #6b5848;
 }
+/* Foto usuario del producto */
+.username-pfp {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.userpfp {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #d2b48c;
+}
+
 
 /* Detalle del producto */
 .product-detail {
