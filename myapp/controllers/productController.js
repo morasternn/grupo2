@@ -1,16 +1,15 @@
-let data = require("../db/index")
-let usuario = data.usuario
 let db= require('../database/models')
-const { Association } = require("sequelize")
+
 
 let productController={
     producto: function (req, res) {
+
         db.Producto.findOne({
             where:{id:req.params.id},
             include:[{association:"usuario"},{association:"comentarios",include:[{association:"usuario"}]}]
         })
-        .then(function(data){
-            res.render("product",{producto:data})
+        .then(function(results){
+            res.render("product",{producto: results})
         })
         
     },

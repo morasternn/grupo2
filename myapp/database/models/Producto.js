@@ -18,6 +18,7 @@ module.exports=function(Sequelize, DataTypes){
         descripcion:{
             type:DataTypes.STRING
         },
+     
         createdAt:{
             type:DataTypes.DATE
         },

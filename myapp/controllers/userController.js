@@ -1,9 +1,8 @@
-let data = require("../db/index");
 let db= require('../database/models')
 
 let userController = {
     profile: function (req, res) {
-        res.render("profile", {usuario: data.usuario, productos: data.productos});
+        res.render("profile", {usuario: null, productos: null});
     },
     register: function (req, res) {
         res.render("register");
@@ -21,10 +20,14 @@ let userController = {
             foto:req.body.foto
         })
         .then(function(){
-            res.redirect("/users/login")
+            return res.redirect("/users/login")
         })
+        .catch(function (err) {
+            return res.send(err)
+        })
+
     }
-    
+
 };
 
 module.exports = userController;
