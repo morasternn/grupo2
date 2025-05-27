@@ -32,27 +32,43 @@ let userController = {
         })
 
     },
-    loginprocess: function(req,res){
-        let userInfo={
-            email: req.body.usuario,
-            password: req.body.contrasena,
-            recordarme: req.body.recordarme
+    loginprocess: function (req, res) {
+        let userInfo = {
+          email: req.body.email,
+          contrasenia: req.body.contraseña,
+          recordarme: req.body.recordarme
         }
-        //findOne
-        //then validamos el email
-        //validamos bcrypjs
+        
+        db.Usuario.findOne({
+          where: [{ email: userInfo.email }]
+        })
+          .then(function (results) {
+            let email = results.email
+            let password = results.contrasenia
+    
+            if (results == undefined) { 
+              return res.send ("El email no está registrado")
+              
+            }
+            if (bcrypt.compareSync(userInfo.contrasenia, password)) {
 
-        //si es true -- index
-        req.session.user = userInfo;
-        //creao la cookie
+              req.session.user = resultado;
+            
+              if (userInfo.recordarme != undefined) {
+                res.cookie("user", userInfo, { maxAge: 600000 })
+              }
+              res.redirect("/")
 
-        if (userInfo.recordarme != undefined) {
-            res.cookie('user', userInfo, {maxAge: 60000})
-        }
-
-        return res.redirect('/')
-
-    },
+            } else { 
+              return res.send("La contraseña es incorrecta")
+            }
+          })
+    
+          .catch(function (err) {
+            return res.send(err)
+          })
+    
+      },
 
         
 
