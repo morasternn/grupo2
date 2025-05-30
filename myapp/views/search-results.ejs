@@ -14,20 +14,32 @@
 	<!-- Novedades -->
 	<div class="container products-wrapper">
 		<div class="row">
-			<div class="col-12">
-				<h2 class="products-title">Resultados de búsqueda</h2>
-			</div>
-			<!-- Show the "ultimos" products -->
-			<% for( let i = 0; i < results.length; i++ ) { %>
 				<div class="col-12">
-						<article class="resultado-box">
-							<img src="<%= results[i].imagen %>" alt="<%= results[i].nombre %>">
-								<h2>Nombre: <%= results[i].nombre %></h2>
-								<p>Descripcion: <%= results[i].descripcion %></p>
-								<p>Comentarios: <%= results[i].comentarios.length %></p>
-							</article>
+					<h2 class="products-title">Resultados de búsqueda</h2>
 				</div>
-			<% } %>
+			<!-- Show the "ultimos" products -->
+			<% if (results.length > 0) { %>  
+				<% for( let i = 0; i < results.length; i++ ) { %>
+					<div class="col-12 col-sm-6 col-lg-3">
+						<section class="product-box">
+							<a href="/producto/detalle/<%=results[i].id%>">
+								<figure class="product-box_image">
+									<img src="<%= results[i].imagen %>" alt="<%= results[i].nombre %>">
+								</figure>
+								<article class="product-box_data">
+									<h2>Nombre: <%= results[i].nombre %></h2>
+									<p>Descripcion: <%= results[i].descripcion %></p>
+									<p>Comentarios: <%= results[i].comentarios.length %></p>
+								</article>
+							</a>
+						</section>
+					</div>
+				 <% } %>
+				 <% } else { %> <!--si no se encontraron productos, entonces se muestra el mensaje -->
+					<p> No hay resultados para la búsqueda </p>
+				<% } %>
+		
+
 		</div>
 	</div>
 			

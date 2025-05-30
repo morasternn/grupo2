@@ -15,7 +15,7 @@ module.exports=function(Sequelize, DataTypes){
             type:DataTypes.STRING(45)
         },
         contrasenia:{
-            type:DataTypes.STRING(45)
+            type:DataTypes.STRING(100)
         },
         fecha:{
             type:DataTypes.DATE
