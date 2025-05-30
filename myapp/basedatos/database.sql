@@ -5,7 +5,7 @@ CREATE TABLE usuarios (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   username VARCHAR(45) UNIQUE,
   email VARCHAR(45) UNIQUE,
-  contrasenia VARCHAR(45),
+  contrasenia VARCHAR(100),
   fecha DATETIME,
   DNI INT,
   foto VARCHAR(45),

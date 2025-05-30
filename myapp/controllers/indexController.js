@@ -3,7 +3,6 @@ let op = db.Sequelize.Op;
 
 let indexController = {
     index: function (req,res) {
-
         let relacion = {
             include:{
                 association: "comentarios"

@@ -6,7 +6,12 @@
 <%- include("./partials/head") %>
 <body>
 	<!-- Header -->
-	<%- include("./partials/headerLogueado", {usuario: usuario}) %>
+	<% if (locals.user != undefined) { %>
+	
+		<%- include("./partials/headerLogueado") %>	
+	 <% } else{%>
+		<%- include("./partials/header") %>	
+		<% } %>
 	<!-- /Header -->
 
 	<!-- Datos del usuario -->
@@ -28,9 +33,9 @@
 				<div>
 					<p><%= usuario.email %></p>
 					<ul class="">
-						<li>10 productos</li>
+						<li><%= usuario.productos.length %> productos</li>
 						<li>200 seguidores</li>
-						<li>300 comentarios</li>
+						<li><%= usuario.comentarios.length %> comentarios</li>
 					</ul>
 				</div>
 			</div>
@@ -48,7 +53,7 @@
 			<% for (let i = 0; i < productos.length; i++) { %>
 				<div class="col-12 col-sm-6 col-lg-3">
 					<section class="product-box">
-						<a href="/producto/detalle/<%= i %>">
+						<a href="/producto/detalle/<%= productos[i].id %>">
 							<figure class="product-box_image">
 								<img src="<%= productos[i].imagen %>" alt="<%= productos[i].nombre %>">
 							</figure>

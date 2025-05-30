@@ -4,8 +4,13 @@ const session = require("express-session")
 
 let userController = {
     profile: function (req, res) {
-        res.render("profile", {usuario: null, productos: null});
-        //profile
+      console.log("hola")
+      db.Usuario.findByPk(req.params.id, {include: [{association: "productos",include: [{ association: "comentarios" }]},{association: "comentarios"}]})
+      
+      .then(function(results){
+        res.render("profile", {usuario: results, productos: results.productos});     
+      })
+      
     },
     register: function (req, res) {
         res.render("register");
@@ -34,41 +39,45 @@ let userController = {
     },
     loginprocess: function (req, res) {
         let userInfo = {
-          email: req.body.email,
-          contrasenia: req.body.contraseña,
+          email: req.body.usuario,
+          contrasenia: req.body.contrasena,
           recordarme: req.body.recordarme
         }
-        
+        console.log(userInfo)
         db.Usuario.findOne({
           where: [{ email: userInfo.email }]
         })
           .then(function (results) {
-            let email = results.email
-            let password = results.contrasenia
-    
-            if (results == undefined) { 
+            if (results == null) { 
               return res.send ("El email no está registrado")
               
             }
+            let email = results.email
+            let password = results.contrasenia
             if (bcrypt.compareSync(userInfo.contrasenia, password)) {
+              req.session.user = results;
 
-              req.session.user = resultado;
-            
               if (userInfo.recordarme != undefined) {
+
                 res.cookie("user", userInfo, { maxAge: 600000 })
               }
               res.redirect("/")
-
             } else { 
               return res.send("La contraseña es incorrecta")
             }
           })
     
           .catch(function (err) {
+            console.log(err,"error")
             return res.send(err)
           })
     
       },
+      logout: function(req,res){
+        req.session.destroy();
+          res.clearCookie("user");
+          return res.redirect("/");
+      }
 
         
 
