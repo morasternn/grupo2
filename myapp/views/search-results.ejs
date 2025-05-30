@@ -18,13 +18,13 @@
 				<h2 class="products-title">Resultados de búsqueda</h2>
 			</div>
 			<!-- Show the "ultimos" products -->
-			<% for( let i = 0; i < productos.length; i++ ) { %>
+			<% for( let i = 0; i < results.length; i++ ) { %>
 				<div class="col-12">
 						<article class="resultado-box">
-							<img src="<%= productos[i].imagen %>" alt="<%= productos[i].nombre %>">
-								<h2>Nombre: <%= productos[i].nombre %></h2>
-								<p>Descripcion: <%= productos[i].descripcion %></p>
-								<p>Comentarios: <%= productos[i].comentarios.length %></p>
+							<img src="<%= results[i].imagen %>" alt="<%= results[i].nombre %>">
+								<h2>Nombre: <%= results[i].nombre %></h2>
+								<p>Descripcion: <%= results[i].descripcion %></p>
+								<p>Comentarios: <%= results[i].comentarios.length %></p>
 							</article>
 				</div>
 			<% } %>
