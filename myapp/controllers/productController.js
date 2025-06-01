@@ -32,7 +32,7 @@ let productController= {
           imagen: req.body.imagen,
           nombre: req.body.nombre,
           descripcion: req.body.descripcion,
-          usuarioId: req.session.usuario.id,
+          usuarioId: req.session.user.id,
         })
         .then(function(){
           res.redirect("/");
