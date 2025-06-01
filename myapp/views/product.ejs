@@ -31,22 +31,31 @@
 				</article>
 				<div class="col-12 col-lg-4">
 					<section class="comments">
-						<%for (let i = 0; i < producto.comentarios.length; i++) { %>
-							<article>
-							<% if (producto.comentarios[i].usuario) { %>
-								<img src="<%= producto.comentarios[i].usuario.foto %>" alt="">
-								<div class="data">
-									<p class="user">
-										<strong> <a href="/users/profile/<%= producto.comentarios[i].usuario.id %>"><%= producto.comentarios[i].usuario.username %> </a> </strong>
-											<%= producto.comentarios[i].texto %></p>
-								</div>
-								<% } else { %>
-									<p><em>Comentario sin usuario válido.</em></p>
-								  <% } %>
-							</article>
+						<% if (producto.comentarios && producto.comentarios.length > 0) { %>
+							<% for (let i = 0; i < producto.comentarios.length; i++) { %>
+								<article>
+									<% if (producto.comentarios[i].usuario) { %>
+										<img src="<%= producto.comentarios[i].usuario.foto %>" alt="">
+										<div class="data">
+											<p class="user">
+												<strong>
+													<a href="/users/profile/<%= producto.comentarios[i].usuario.id %>">
+														<%= producto.comentarios[i].usuario.username %>
+													</a>
+												</strong>
+												<%= producto.comentarios[i].texto %>
+											</p>
+										</div>
+									<% } else { %>
+										<p>Comentario sin usuario válido.</p>
+									<% } %>
+								</article>
+							<% } %>
+						<% } else { %>
+							<p><Este producto aún no tiene comentarios.</p>
 						<% } %>
-
 					</section>
+
 					<% if (locals.user) { %>
 					<form class="form" action="/producto/comentario/<%=producto.id%>" method="POST">
 						<input class="form-input" name="texto" type="text" value="" placeholder="Agregar comentario">
@@ -55,7 +64,6 @@
 					<% } else { %>
 						<p><a href="/users/login">Iniciá sesión para comentar.</a></p>
 					  <% } %>
-					<hr>
 				</div>
 			</div>
 		</div>

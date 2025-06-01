@@ -43,13 +43,12 @@ let productController= {
     },
 
     agregarComentario: function(req,res){
-        if (!req.session.usuario) {
-            return res.redirect("/login");
+        if (!req.session.user) {
+            return res.redirect('/users/login');
         }
-
         db.Comentario.create({    
             texto: req.body.texto,
-            usuarioId: req.session.usuario.id, 
+            usuarioId: req.session.user.id, 
             productoId: req.params.id,
     
         })
