@@ -42,24 +42,6 @@ let productController= {
         });
     },
 
-    buscarProducto: function (req, res) {
-        let busqueda = req.query.search;
-        db.Producto.findAll({
-          where: {nombre:{[Op.like]: "%" + busqueda + "%"}},
-          include: [{association: "usuario"}]
-        })
-        .then(function (resultados){
-          if (resultados.length > 0){
-            return res.render("search-results", {results: resultados});
-          } else {
-            return res.send("No hay resultados para su criterio de búsqueda.");
-          }
-        })
-        .catch(function (error) {
-          return res.send("Error buscando el producto: " + error);
-        });
-    },
-
     agregarComentario: function(req,res){
         if (!req.session.usuario) {
             return res.redirect("/login");
