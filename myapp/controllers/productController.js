@@ -20,8 +20,8 @@ let productController= {
     },
     
     agregarProducto: function (req, res) {
-        if (req.session.usuario) {
-          res.render("product-add", {usuario: req.session.usuario});
+        if (req.session.user) {
+          res.render("product-add", {usuario: req.session.user});
         } else {
           res.redirect("/login");
         }

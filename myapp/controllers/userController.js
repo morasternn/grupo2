@@ -1,10 +1,10 @@
 let db= require('../database/models');
 const bcrypt= require('bcryptjs');
 const session = require("express-session")
+const { Op } = require('sequelize');
 
 let userController = {
     profile: function (req, res) {
-      console.log("hola")
       db.Usuario.findByPk(req.params.id, {include: [{association: "productos",include: [{ association: "comentarios" }]},{association: "comentarios"}]})
       
       .then(function(results){
@@ -19,22 +19,40 @@ let userController = {
         res.render("login");
     },
     registerprocess: function(req,res){
-        let contrasena = req.body.contrasena
-        let contrasenaEncriptada=bcrypt.hashSync(contrasena,10);
-        db.Usuario.create({
-            username: req.body.usuario,
-            email: req.body.email,
-            contrasenia: contrasenaEncriptada,
-            fecha: req.body.fechaNacimiento,
-            DNI:req.body.dni,
-            foto:req.body.foto
-        })
-        .then(function(result){
-            return res.redirect("/users/login")
-        })
-        .catch(function (err) {
-            return res.send(err)
-        })
+      
+      db.Usuario.findOne({
+        where: {
+        [Op.or]: [
+          { username: req.body.usuario },
+          { email: req.body.email }
+        ]}
+      })
+      .then (function (usuario) {
+        if (usuario == null){
+          if (req.body.contrasena.length > 2) {
+            let contrasena = req.body.contrasena
+            let contrasenaEncriptada=bcrypt.hashSync(contrasena,10);
+            db.Usuario.create({
+                username: req.body.usuario,
+                email: req.body.email,
+                contrasenia: contrasenaEncriptada,
+                fecha: req.body.fechaNacimiento,
+                DNI:req.body.dni,
+                foto:req.body.foto
+            })
+            .then(function(result){
+                return res.redirect("/users/login")
+            })
+            .catch(function (err) {
+                return res.send(err)
+            })
+          }else{
+            res.send("La contrasenia tiene menos de 3 caracteres")
+          }
+        } else{
+          res.send("El email ya existe o el nombre de usuario")
+        }
+      })
 
     },
     loginprocess: function (req, res) {
@@ -43,7 +61,6 @@ let userController = {
           contrasenia: req.body.contrasena,
           recordarme: req.body.recordarme
         }
-        console.log(userInfo)
         db.Usuario.findOne({
           where: [{ email: userInfo.email }]
         })
